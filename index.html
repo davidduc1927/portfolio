@@ -105,68 +105,73 @@ section{position:relative;}
 .btn.on-dark.primary{background:#fff; color:var(--navy); border-color:#fff;}
 .btn.on-dark.primary:hover{background:var(--orange); border-color:var(--orange); color:#fff;}
 
-/* ================= HERO ================= */
-.hero{
-  min-height: auto; background: var(--grad-hero); color: #fff;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 100px 0 60px; position: relative; overflow: hidden;
-}
-.hero::after{
-  content: ''; position: absolute; inset: 0;
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
-  background-size: 34px 34px; opacity: 0.06; pointer-events: none;
-}
-.hero .wrap{position: relative; z-index: 2;}
-.hero-tag{
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.75);
-  border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 6px 16px;
-  margin-bottom: 20px; background: rgba(255,255,255,0.06); backdrop-filter: blur(6px);
-}
-.hero-tag .dot{width: 7px; height: 7px; border-radius: 50%; background: var(--orange);}
-.hero h1{
-  font-size: clamp(38px, 5.5vw, 76px);
-  max-width: 860px;
-  line-height: 1.08;
-}
-.hero h1 .grad{
-  background: linear-gradient(100deg, #7FA3FF, #C29BFF 45%, #FF9CD1 80%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
-}
-.hero .role{
-  margin-top: 16px; font-size: clamp(16px, 1.8vw, 20px); font-weight: 500; color: rgba(255,255,255,0.88);
-  max-width: 600px;
-}
-.hero .statement{
-  margin-top: 14px; font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.6); max-width: 500px;
-}
-.hero-cta{display: flex; gap: 14px; margin-top: 24px; flex-wrap: wrap;}
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero" data-theme="dark" style="min-height: 100vh; display: flex; align-items: center; padding: 100px 0 60px; box-sizing: border-box;">
+  <div class="wrap" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    
+    <!-- Lưới 2 cột chính -->
+    <div style="display: grid; grid-template-columns: 1.15fr 0.95fr; gap: 40px; align-items: stretch;">
+      
+      <!-- CỘT TRÁI: 2 khối card xếp chồng -->
+      <div style="display: flex; flex-direction: column; gap: 20px; justify-content: center;">
+        
+        <!-- Card 1: Giới thiệu chính -->
+        <div style="background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 28px; padding: 36px 36px 32px; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);">
+          
+          <div class="hero-tag" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px; border: 1px solid rgba(255,255,255,0.2); border-radius: 100px; padding: 6px 14px; background: rgba(255,255,255,0.06);">
+            <span class="dot" style="width: 7px; height: 7px; border-radius: 50%; background: var(--orange); display: inline-block;"></span>
+            <span style="font-size: 12.5px; color: rgba(255,255,255,0.8); font-weight: 500;">Ho Chi Minh City · Marketing student, UEH.ISB Honours College</span>
+          </div>
 
-/* Thu gọn khoảng cách và tỉ lệ lưới */
-.hero-grid{
-  display: grid; grid-template-columns: minmax(280px, 380px) 1fr; gap: 40px; align-items: center; margin-top: 36px;
-}
-.hero-photo{
-  width: 100%; max-width: 380px;
-  aspect-ratio: 4/5; border-radius: 20px; position: relative; overflow: hidden;
-  background: linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.16);
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  backdrop-filter: blur(4px); z-index: 1000;
-}
-.hero-photo .ph-label{font-size: 13px; color: rgba(255,255,255,0.45); padding: 0 30px; line-height: 1.5;}
-.hero-photo svg{width: 54px; height: 54px; opacity: .35; margin-bottom: 14px;}
-.hero-meta{display: flex; flex-direction: column; gap: 16px; max-width: 440px;}
-.hero-meta .row{border-top: 1px solid rgba(255,255,255,0.15); padding-top: 12px;}
-.hero-meta .row .k{font-size: 11px; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); margin-bottom: 4px;}
-.hero-meta .row .v{font-size: 14px; font-weight: 500; color: #fff;}
+          <h1 style="font-size: clamp(34px, 3.8vw, 52px); line-height: 1.1; font-weight: 700; color: #fff; margin: 0 0 16px; letter-spacing: -0.02em;">
+            Hi, I'm Minh Đức<br>
+            <span class="grad">Marketeen mind.<br>Creative energy.</span>
+          </h1>
 
-@media (max-width: 800px){
-  .hero-grid{grid-template-columns: 1fr; gap: 28px;}
-  .hero-photo{max-width: 320px; margin: 0 auto;}
-}
+          <p class="role" style="font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.9); margin: 0 0 10px;">
+            Brand thinker in training
+          </p>
 
+          <p class="statement" style="font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,0.65); margin: 0 0 24px; max-width: 480px;">
+            I loves asking questions and turning real consumer insights into ideas people can actually connect with
+          </p>
+
+          <div class="hero-cta" style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <a href="#work" class="btn on-dark primary" style="padding: 10px 22px; border-radius: 100px; font-size: 13.5px; font-weight: 600; text-decoration: none;">Explore my work</a>
+            <a href="#connect" class="btn on-dark" style="padding: 10px 22px; border-radius: 100px; font-size: 13.5px; font-weight: 500; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); color: #fff;">Let's connect</a>
+          </div>
+
+        </div>
+
+        <!-- Card 2: Thông tin Currently / Focus / Chasing -->
+        <div style="background: rgba(255, 255, 255, 0.035); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 24px 32px; display: flex; flex-direction: column; gap: 14px;">
+          <div>
+            <div style="font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-bottom: 4px;">Currently</div>
+            <div style="font-size: 13.5px; color: rgba(255,255,255,0.9); font-weight: 500;">Year 3, Marketing - UEH.ISB Honours College</div>
+          </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px;">
+            <div style="font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-bottom: 4px;">Focus</div>
+            <div style="font-size: 13.5px; color: rgba(255,255,255,0.9); font-weight: 500;">Brand Marketing &amp; Content Creation</div>
+          </div>
+          <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 12px;">
+            <div style="font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.4); margin-bottom: 4px;">Chasing</div>
+            <div style="font-size: 13.5px; color: rgba(255,255,255,0.9); font-weight: 500; line-height: 1.4;">A seat in Brand Marketing at a company that makes things people love</div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CỘT PHẢI: Khung ảnh chân dung -->
+      <div style="display: flex; align-items: center; justify-content: center;">
+        <div class="hero-photo" style="width: 100%; height: 100%; min-height: 520px; max-height: 640px; aspect-ratio: 4/5; border-radius: 28px; overflow: hidden; border: 1px solid rgba(255,255,255,0.14); box-shadow: 0 24px 48px rgba(0,0,0,0.3); background: rgba(255,255,255,0.04);">
+          <img src="anhcv.jpg" alt="Trần Minh Đức" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 /* ================= SECTION HEADS ================= */
 .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:40px; margin-bottom:64px; flex-wrap:wrap;}
 .sec-head .kicker{font-size:13px; font-weight:600; color:var(--blue); margin-bottom:14px; display:block;}
