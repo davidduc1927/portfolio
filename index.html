@@ -105,61 +105,66 @@ section{position:relative;}
 .btn.on-dark.primary{background:#fff; color:var(--navy); border-color:#fff;}
 .btn.on-dark.primary:hover{background:var(--orange); border-color:var(--orange); color:#fff;}
 
-/* ================= HERO ================= */
-.hero{
-  min-height:100vh; background:var(--grad-hero); color:#fff;
-  display:flex; flex-direction:column; justify-content:center;
-  padding:140px 0 80px; position:relative; overflow:hidden;
-}
-.hero::after{
-  content:''; position:absolute; inset:0;
-  background-image:
-    radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
-  background-size:34px 34px; opacity:0.06; pointer-events:none;
-}
-.hero .wrap{position:relative; z-index:2;}
-.hero-tag{
-  display:inline-flex; align-items:center; gap:8px;
-  font-size:13px; font-weight:500; color:rgba(255,255,255,0.75);
-  border:1px solid rgba(255,255,255,0.25); border-radius:100px; padding:8px 16px;
-  margin-bottom:28px; background:rgba(255,255,255,0.06); backdrop-filter:blur(6px);
-}
-.hero-tag .dot{width:7px; height:7px; border-radius:50%; background:var(--orange);}
-.hero h1{
-  font-size:clamp(44px, 7.2vw, 96px);
-  max-width:920px;
-}
-.hero h1 .grad{
-  background:linear-gradient(100deg, #7FA3FF, #C29BFF 45%, #FF9CD1 80%);
-  -webkit-background-clip:text; background-clip:text; color:transparent;
-}
-.hero .role{
-  margin-top:22px; font-size:clamp(18px,2.3vw,24px); font-weight:500; color:rgba(255,255,255,0.88);
-  max-width:640px;
-}
-.hero .statement{
-  margin-top:18px; font-size:16px; line-height:1.6; color:rgba(255,255,255,0.6); max-width:520px;
-}
-.hero-grid{
-  display:grid; grid-template-columns:1.5fr 1fr; gap:60px; align-items:end; margin-top:70px;
-}
-.hero-photo{
-  aspect-ratio:4/5; border-radius:24px; position:relative; overflow:hidden;
-  background:linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-  border:1px solid rgba(255,255,255,0.16);
-  display:flex; align-items:center; justify-content:center; text-align:center;
-  backdrop-filter:blur(4px); z-index: 1000;
-}
-.hero-photo .ph-label{font-size:13px; color:rgba(255,255,255,0.45); padding:0 30px; line-height:1.5;}
-.hero-photo svg{width:54px; height:54px; opacity:.35; margin-bottom:14px;}
-.hero-meta{display:flex; flex-direction:column; gap:22px;}
-.hero-meta .row{border-top:1px solid rgba(255,255,255,0.15); padding-top:16px;}
-.hero-meta .row .k{font-size:11px; letter-spacing:0.06em; color:rgba(255,255,255,0.45); margin-bottom:6px;}
-.hero-meta .row .v{font-size:15px; font-weight:500; color:#fff;}
-.hero-cta{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
-@media (max-width:800px){
-  .hero-grid{grid-template-columns:1fr;}
-}
+<!-- ==================== HERO ==================== -->
+<section class="hero" id="hero" data-theme="dark" style="min-height: 90vh; display: flex; align-items: center; padding: 100px 0 60px;">
+  <div class="wrap" style="width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+    
+    <div style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;">
+      
+      <!-- Cột Trái: Giới thiệu & Thông tin -->
+      <div>
+        <div class="hero-tag" style="display: inline-flex; align-items: center; gap: 8px; margin-bottom: 20px;">
+          <span class="dot" style="width: 8px; height: 8px; border-radius: 50%; background: #4ade80; display: inline-block;"></span>
+          <span style="font-size: 13px; color: rgba(255,255,255,0.7); letter-spacing: 0.04em;">Ho Chi Minh City · Marketing Student, UEH.ISB Honours College</span>
+        </div>
+
+        <h1 style="font-size: 52px; line-height: 1.1; font-weight: 700; margin-bottom: 18px; color: #fff; letter-spacing: -0.02em;">
+          Hi, I'm Minh Đức<br>
+          <span class="grad">Marketeen mind.<br>Creative energy.</span>
+        </h1>
+
+        <p class="role" style="font-size: 18px; font-weight: 600; color: rgba(255,255,255,0.9); margin-bottom: 12px;">
+          Brand thinker in training
+        </p>
+
+        <p class="statement" style="font-size: 15px; line-height: 1.6; color: rgba(255,255,255,0.65); max-width: 480px; margin-bottom: 28px;">
+          I love asking questions and turning real consumer insights into ideas people can actually connect with.
+        </p>
+
+        <!-- Nút bấm -->
+        <div class="hero-cta" style="display: flex; gap: 14px; margin-bottom: 36px;">
+          <a href="#work" class="btn on-dark primary" style="padding: 11px 24px; border-radius: 100px; font-size: 14px; font-weight: 600; text-decoration: none;">Explore my work</a>
+          <a href="#connect" class="btn on-dark" style="padding: 11px 24px; border-radius: 100px; font-size: 14px; font-weight: 500; text-decoration: none; border: 1px solid rgba(255,255,255,0.25); color: #fff;">Let's connect</a>
+        </div>
+
+        <!-- 3 Dòng meta thông số nhanh -->
+        <div style="border-top: 1px solid rgba(255,255,255,0.12); padding-top: 20px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-bottom: 4px;">Currently</div>
+            <div style="font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 500; line-height: 1.4;">Year 3, Marketing<br><span style="color: rgba(255,255,255,0.5); font-size: 12px;">UEH.ISB Honours</span></div>
+          </div>
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-bottom: 4px;">Focus</div>
+            <div style="font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 500; line-height: 1.4;">Brand Marketing &amp;<br>Content Creation</div>
+          </div>
+          <div>
+            <div style="font-size: 11px; text-transform: uppercase; color: rgba(255,255,255,0.4); letter-spacing: 0.08em; margin-bottom: 4px;">Chasing</div>
+            <div style="font-size: 13px; color: rgba(255,255,255,0.85); font-weight: 500; line-height: 1.4;">Creating things that people truly love</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cột Phải: Ảnh chân dung cân đối -->
+      <div style="display: flex; justify-content: center;">
+        <div class="hero-photo" style="width: 100%; max-width: 420px; aspect-ratio: 4/5; border-radius: 28px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.12);">
+          <img src="anhcv.jpg" alt="Trần Minh Đức" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
 
 /* ================= SECTION HEADS ================= */
 .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:40px; margin-bottom:64px; flex-wrap:wrap;}
@@ -309,7 +314,7 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 </div>
 
 <div class="topnav" id="topnav">
-  <a class="mark" href="#hero">M.Đ.TRAN</a>
+  <a class="mark" href="#hero">M.D. TRAN</a>
   <nav>
     <a href="#about">About</a>
     <a href="#toolkit">Skills</a>
