@@ -105,98 +105,60 @@ section{position:relative;}
 .btn.on-dark.primary{background:#fff; color:var(--navy); border-color:#fff;}
 .btn.on-dark.primary:hover{background:var(--orange); border-color:var(--orange); color:#fff;}
 
-/* ================= HERO ================= */
-.hero{
-  min-height: 100vh; background: var(--grad-hero); color: #fff;
-  display: flex; align-items: center;
-  padding: 100px 0 60px; position: relative; overflow: hidden;
+hero{
+  min-height:100vh; background:var(--grad-hero); color:#fff;
+  display:flex; flex-direction:column; justify-content:center;
+  padding:140px 0 80px; position:relative; overflow:hidden;
 }
 .hero::after{
-  content: ''; position: absolute; inset: 0;
+  content:''; position:absolute; inset:0;
   background-image:
     radial-gradient(circle, rgba(255,255,255,0.5) 1px, transparent 1px);
-  background-size: 34px 34px; opacity: 0.06; pointer-events: none;
+  background-size:34px 34px; opacity:0.06; pointer-events:none;
 }
-.hero .wrap{position: relative; z-index: 2; width: 100%;}
- 
-/* Bố cục 2 cột: Cột trái (Chữ + Meta) - Cột phải (Ảnh) */
-.hero-grid{
-  display: grid; 
-  grid-template-columns: 1.15fr 0.95fr; 
-  gap: 36px; 
-  align-items: center;
-}
- 
-/* Cột trái chứa 2 hộp */
-.hero-left{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
- 
-/* Khung kính mờ cho hộp chữ chính */
-.hero-main-card{
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 24px;
-  padding: 32px 32px 28px;
-}
- 
+.hero .wrap{position:relative; z-index:2;}
 .hero-tag{
-  display: inline-flex; align-items: center; gap: 8px;
-  font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.75);
-  border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 6px 14px;
-  margin-bottom: 18px; background: rgba(255,255,255,0.06);
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:13px; font-weight:500; color:rgba(255,255,255,0.75);
+  border:1px solid rgba(255,255,255,0.25); border-radius:100px; padding:8px 16px;
+  margin-bottom:28px; background:rgba(255,255,255,0.06); backdrop-filter:blur(6px);
 }
-.hero-tag .dot{width: 7px; height: 7px; border-radius: 50%; background: var(--orange);}
- 
+.hero-tag .dot{width:7px; height:7px; border-radius:50%; background:var(--orange);}
 .hero h1{
-  font-size: clamp(32px, 3.8vw, 48px);
-  line-height: 1.12;
+  font-size:clamp(44px, 7.2vw, 96px);
+  max-width:920px;
 }
 .hero h1 .grad{
-  background: linear-gradient(100deg, #7FA3FF, #C29BFF 45%, #FF9CD1 80%);
-  -webkit-background-clip: text; background-clip: text; color: transparent;
+  background:linear-gradient(100deg, #7FA3FF, #C29BFF 45%, #FF9CD1 80%);
+  -webkit-background-clip:text; background-clip:text; color:transparent;
 }
 .hero .role{
-  margin-top: 14px; font-size: 16px; font-weight: 600; color: rgba(255,255,255,0.9);
+  margin-top:22px; font-size:clamp(18px,2.3vw,24px); font-weight:500; color:rgba(255,255,255,0.88);
+  max-width:640px;
 }
 .hero .statement{
-  margin-top: 10px; font-size: 14.5px; line-height: 1.6; color: rgba(255,255,255,0.65); max-width: 480px;
+  margin-top:18px; font-size:16px; line-height:1.6; color:rgba(255,255,255,0.6); max-width:520px;
 }
-.hero-cta{display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap;}
- 
-/* Hộp meta bên dưới */
-.hero-meta{
-  background: rgba(255, 255, 255, 0.035);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 20px;
-  padding: 20px 28px;
-  display: flex; flex-direction: column; gap: 12px;
+.hero-grid{
+  display:grid; grid-template-columns:1.5fr 1fr; gap:60px; align-items:end; margin-top:70px;
 }
-.hero-meta .row{border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;}
-.hero-meta .row:first-child{border-top: none; padding-top: 0;}
-.hero-meta .row .k{font-size: 10px; letter-spacing: 0.06em; color: rgba(255,255,255,0.45); margin-bottom: 4px; text-transform: uppercase;}
-.hero-meta .row .v{font-size: 13.5px; font-weight: 500; color: #fff;}
- 
-/* Cột phải: Khung ảnh */
 .hero-photo{
-  aspect-ratio: 4/5; border-radius: 24px; position: relative; overflow: hidden;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.16);
-  display: flex; align-items: center; justify-content: center;
-  backdrop-filter: blur(4px);
-  width: 100%; max-height: 600px;
+  aspect-ratio:4/5; border-radius:24px; position:relative; overflow:hidden;
+  background:linear-gradient(150deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  border:1px solid rgba(255,255,255,0.16);
+  display:flex; align-items:center; justify-content:center; text-align:center;
+  backdrop-filter:blur(4px); z-index: 1000;
 }
-.hero-photo img{width: 100%; height: 100%; object-fit: cover;}
- 
-@media (max-width: 850px){
-  .hero-grid{grid-template-columns: 1fr; gap: 24px;}
-  .hero-photo{max-width: 360px; margin: 0 auto;}
+.hero-photo .ph-label{font-size:13px; color:rgba(255,255,255,0.45); padding:0 30px; line-height:1.5;}
+.hero-photo svg{width:54px; height:54px; opacity:.35; margin-bottom:14px;}
+.hero-meta{display:flex; flex-direction:column; gap:22px;}
+.hero-meta .row{border-top:1px solid rgba(255,255,255,0.15); padding-top:16px;}
+.hero-meta .row .k{font-size:11px; letter-spacing:0.06em; color:rgba(255,255,255,0.45); margin-bottom:6px;}
+.hero-meta .row .v{font-size:15px; font-weight:500; color:#fff;}
+.hero-cta{display:flex; gap:14px; margin-top:36px; flex-wrap:wrap;}
+@media (max-width:800px){
+  .hero-grid{grid-template-columns:1fr;}
+}
   
 /* ================= SECTION HEADS ================= */
 .sec-head{display:flex; align-items:flex-end; justify-content:space-between; gap:40px; margin-bottom:64px; flex-wrap:wrap;}
@@ -360,24 +322,33 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 <!-- ================= HERO ================= -->
 <section class="hero" id="hero" data-theme="dark">
   <div class="wrap">
-    <div class="hero-tag"><span class="dot"></span> Ho Chi Minh City · Marketing student, UEH.ISB Honours College</div>
-    <h1>Hi, I'm Minh Đức <span class="grad">Marketeen mind. Creative energy.</span></h1>
-    <p class="role"> Brand thinker in training</p>
-    <p class="statement">I loves asking questions and turning real consumer insights into ideas people can actually connect with</p>
-    <div class="hero-cta">
-      <a href="#work" class="btn on-dark primary">Explore my work</a>
-      <a href="#connect" class="btn on-dark">Let's connect</a>
-    </div>
-
     <div class="hero-grid">
+
+      <div class="hero-left">
+
+        <div class="hero-main-card">
+          <div class="hero-tag"><span class="dot"></span> Ho Chi Minh City · Marketing student, UEH.ISB Honours College</div>
+          <h1>Hi, I'm Minh Đức <span class="grad">Marketeen mind. Creative energy.</span></h1>
+          <p class="role"> Brand thinker in training</p>
+          <p class="statement">I loves asking questions and turning real consumer insights into ideas people can actually connect with</p>
+          <div class="hero-cta">
+            <a href="#work" class="btn on-dark primary">Explore my work</a>
+            <a href="#connect" class="btn on-dark">Let's connect</a>
+          </div>
+        </div>
+
+        <div class="hero-meta">
+          <div class="row"><div class="k">CURRENTLY</div><div class="v">Year 3, Marketing - UEH.ISB Honours College</div></div>
+          <div class="row"><div class="k">FOCUS</div><div class="v">Brand Marketing &amp; Content Creation</div></div>
+          <div class="row"><div class="k">CHASING</div><div class="v">A seat in Brand Marketing at a company that makes things people love</div></div>
+        </div>
+
+      </div>
+
       <div class="hero-photo">
-       <img src="anhcv.jpg" alt="Trần Minh Đức" style="width: 100%; height: 100%; object-fit: cover;">
+        <img src="anhcv.jpg" alt="Trần Minh Đức" style="width: 100%; height: 100%; object-fit: cover;">
       </div>
-      <div class="hero-meta">
-        <div class="row"><div class="k">CURRENTLY</div><div class="v">Year 3, Marketing - UEH.ISB Honours College</div></div>
-        <div class="row"><div class="k">FOCUS</div><div class="v">Brand Marketing &amp; Content Creation</div></div>
-        <div class="row"><div class="k">CHASING</div><div class="v">A seat in Brand Marketing at a company that makes things people love</div></div>
-      </div>
+
     </div>
   </div>
 </section>
