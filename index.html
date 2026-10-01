@@ -622,57 +622,61 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 </section>
 
 <!-- ==================== EXTRACURRICULAR & PROJECTS ==================== -->
-<section class="content" id="content" data-theme="dark">
-  <div class="wrap">
+<section id="content" style="background: var(--grad-hero); color: #fff; padding: 100px 0 80px; position: relative; overflow: hidden;">
+  <div class="wrap" style="position: relative; z-index: 2; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px; box-sizing: border-box;">
     
-    <div class="sec-head">
+    <!-- Tiêu đề màu trắng chuẩn trên nền tối -->
+    <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 48px; gap: 32px; flex-wrap: wrap;">
       <div>
-        <span class="kicker">Extracurricular &amp; Projects</span>
-        <h2>Where I learn by doing</h2>
+        <span style="display: block; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--blue); margin-bottom: 12px;">Extracurricular &amp; Projects</span>
+        <h2 style="font-size: clamp(36px, 4.5vw, 56px); font-weight: 700; color: #fff; line-height: 1.1; margin: 0;">Where I learn by doing</h2>
       </div>
-      <p>Studying abroad, researching across borders and creating content on my own.The experiences that shaped how I think about people and brands.</p>
+      <p style="font-size: 15px; line-height: 1.6; color: rgba(255, 255, 255, 0.7); max-width: 440px; margin: 0;">
+        Studying abroad, researching across borders and creating content on my own. The experiences that shaped how I think about people and brands.
+      </p>
     </div>
 
-    <div class="content-grid">
+    <!-- Lưới 4 ô kính mờ (Glassmorphism Cards) đúng phong cách gốc -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; align-items: stretch;">
       
-      <!-- Card 1: Học tập & Trao đổi quốc tế -->
-      <div class="card card-tall">
-        <span class="platform">Study Tour &amp; Exchange</span>
-        <div class="c-body">
-          <h4>International Exchange</h4>
-          <p>Rotterdam University of Applied Sciences, Netherlands — Khám phá hành vi người tiêu dùng đa văn hóa và mở rộng tư duy kinh doanh toàn cầu.</p>
+      <!-- Card 1 -->
+      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 26px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; justify-content: space-between; min-height: 240px;">
+        <div>
+          <span style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.5); font-weight: 600; display: block; margin-bottom: 12px;">Study Tour &amp; Exchange</span>
+          <h4 style="font-size: 18px; font-weight: 600; color: #fff; margin: 0 0 10px;">International Exchange</h4>
+          <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin: 0;">Rotterdam University of Applied Sciences, Netherlands — Khám phá hành vi người tiêu dùng đa văn hóa và mở rộng tư duy kinh doanh toàn cầu.</p>
         </div>
-        <div class="c-foot">2026 · Academic Exchange</div>
+        <div style="font-size: 12px; color: rgba(255, 255, 255, 0.45); font-weight: 500; margin-top: 20px;">2026 · Academic Exchange</div>
       </div>
 
-      <!-- Card 2: Hoạt động & Diễn đàn -->
-      <div class="card">
-        <span class="platform">Student Initiative</span>
-        <div class="c-body">
-          <h4>Industry Forums &amp; Workshops</h4>
-          <p>Tham gia các diễn đàn định hướng nghề nghiệp, kết nối doanh nghiệp và chuỗi hội thảo công nghệ, chuyển đổi số.</p>
+      <!-- Card 2 -->
+      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 26px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; justify-content: space-between; min-height: 240px;">
+        <div>
+          <span style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.5); font-weight: 600; display: block; margin-bottom: 12px;">Student Initiative</span>
+          <h4 style="font-size: 18px; font-weight: 600; color: #fff; margin: 0 0 10px;">Industry Forums &amp; Workshops</h4>
+          <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin: 0;">Tham gia các diễn đàn định hướng nghề nghiệp, kết nối doanh nghiệp và chuỗi hội thảo công nghệ, chuyển đổi số.</p>
         </div>
-        <div class="c-foot">2025 - 2026</div>
+        <div style="font-size: 12px; color: rgba(255, 255, 255, 0.45); font-weight: 500; margin-top: 20px;">2025 - 2026</div>
       </div>
 
-      <!-- Card 3: Thể thao & Tinh thần đồng đội -->
-      <div class="card">
-        <span class="platform">Sports</span>
-        <div class="c-body">
-          <h4>Goalkeeping &amp; Teamwork</h4>
-          <p>Rèn luyện sự tập trung, tinh thần trách nhiệm và khả năng phối hợp dưới áp lực cao trong vai trò thủ môn.</p>
+      <!-- Card 3 -->
+      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 26px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; justify-content: space-between; min-height: 240px;">
+        <div>
+          <span style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.5); font-weight: 600; display: block; margin-bottom: 12px;">Sports</span>
+          <h4 style="font-size: 18px; font-weight: 600; color: #fff; margin: 0 0 10px;">Goalkeeping &amp; Teamwork</h4>
+          <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin: 0;">Rèn luyện sự tập trung, tinh thần trách nhiệm và khả năng phối hợp dưới áp lực cao trong vai trò thủ môn non-professional.</p>
         </div>
-        <div class="c-foot">Team Sports</div>
+        <div style="font-size: 12px; color: rgba(255, 255, 255, 0.45); font-weight: 500; margin-top: 20px;">Team Sports</div>
       </div>
 
-      <!-- Card 4: Sáng tạo nội dung & Visual Storytelling -->
-      <div class="card card-wide">
-        <span class="platform">Creative Media</span>
-        <div class="c-body">
-          <h4>Content &amp; Visual Storytelling</h4>
-          <p>Thực hành xây dựng video, sáng tạo nội dung đa nền tảng và thiết kế ấn phẩm truyền thông thực chiến.</p>
+      <!-- Card 4 -->
+      <div style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 20px; padding: 26px; backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); display: flex; flex-direction: column; justify-content: space-between; min-height: 240px;">
+        <div>
+          <span style="font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: rgba(255, 255, 255, 0.5); font-weight: 600; display: block; margin-bottom: 12px;">Creative Media</span>
+          <h4 style="font-size: 18px; font-weight: 600; color: #fff; margin: 0 0 10px;">Content &amp; Visual Storytelling</h4>
+          <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.7); line-height: 1.6; margin: 0;">Thực hành xây dựng video, sáng tạo nội dung đa nền tảng và thiết kế ấn phẩm truyền thông thực chiến.</p>
         </div>
-        <div class="c-foot">Creator Project · Ongoing</div>
+        <div style="font-size: 12px; color: rgba(255, 255, 255, 0.45); font-weight: 500; margin-top: 20px;">Creator Project · Ongoing</div>
       </div>
 
     </div>
