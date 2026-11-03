@@ -342,8 +342,8 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 <div class="phase-rail" id="phaseRail">
   <span class="ph" data-phase="think">THINK</span>
   <span class="ph" data-phase="create">CREATE</span>
-  <span class="ph" data-phase="connect">CONNECT</span>
   <span class="ph" data-phase="grow">GROW</span>
+  <span class="ph" data-phase="connect">CONNECT</span>
 </div>
 
 <div class="topnav" id="topnav">
@@ -845,10 +845,14 @@ const darkSections = document.querySelectorAll('section[data-theme="dark"]');
 const allSections = document.querySelectorAll('section[data-theme]');
 
 const phaseMap = {
-  hero:'think', about:'think',
-  toolkit:'create', work:'create',
-  content:'connect', beyond:'connect',
-  journey:'grow', connect:'grow'
+  hero: 'think',
+  about: 'think',
+  toolkit: 'create',
+  work: 'create',
+  content: 'grow',
+  journey: 'grow',
+  blog: 'grow',
+  connect: 'connect'
 };
 
 function updatePhase(id){
