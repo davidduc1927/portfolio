@@ -348,10 +348,9 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   }
 }
 
- /* ==================== 3D GALAXY JOURNEY (ENHANCED) ==================== */
+/* ==================== 3D GALAXY JOURNEY (PERFECTED) ==================== */
 .journey-dark-section {
-  padding: 130px 0 70px;
-  /* Gradient đảo hướng: Hồng tím ở trên phải chuyển dần sang xanh sâu thẳm ở dưới để nối liền với Connect */
+  padding: 120px 0 70px;
   background: 
     radial-gradient(circle at 85% 15%, rgba(236,72,153,0.32), transparent 50%),
     radial-gradient(circle at 15% 55%, rgba(61,90,254,0.38), transparent 55%),
@@ -363,7 +362,6 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* Nối liền mạch với Connect bên dưới: triệt tiêu khoảng hở */
 .journey-dark-section + .connect {
   padding-top: 60px !important;
   border-top: none !important;
@@ -375,13 +373,13 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 
 .journey-viewport {
   width: 100%;
-  height: 600px;
-  perspective: 1100px;
+  height: 580px;
+  perspective: 1000px;
   perspective-origin: 50% 50%;
   position: relative;
   overflow: hidden;
   border-radius: 28px;
-  background: radial-gradient(circle at 50% 30%, rgba(61,90,254,0.22), transparent 60%),
+  background: radial-gradient(circle at 50% 30%, rgba(61,90,254,0.25), transparent 65%),
               radial-gradient(circle at 80% 80%, rgba(236,72,153,0.2), transparent 50%),
               #070A1E;
   border: 1px solid rgba(255, 255, 255, 0.14);
@@ -390,7 +388,7 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   user-select: none;
 }
 
-/* Bầu trời sao đa tầng dày đặc + hiệu ứng nhấp nháy */
+/* Lớp sao đa tầng */
 .galaxy-stars-layer1,
 .galaxy-stars-layer2 {
   position: absolute;
@@ -410,50 +408,48 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
     radial-gradient(2px 2px at 910px 260px, rgba(127,163,255,0.9), rgba(0,0,0,0)),
     radial-gradient(1.5px 1.5px at 1040px 70px, #fff, rgba(0,0,0,0));
   background-size: 550px 400px;
-  opacity: 0.8;
+  opacity: 0.85;
   animation: cosmicPulse 6s ease-in-out infinite alternate;
 }
 .galaxy-stars-layer2 {
   background-image: 
     radial-gradient(1px 1px at 50px 90px, rgba(255,255,255,0.6), rgba(0,0,0,0)),
     radial-gradient(1.5px 1.5px at 140px 290px, rgba(255,255,255,0.8), rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 240px 160px, rgba(255,255,255,0.5), rgba(0,0,0,0)),
     radial-gradient(1.5px 1.5px at 450px 370px, #fff, rgba(0,0,0,0)),
     radial-gradient(1px 1px at 680px 80px, rgba(255,255,255,0.7), rgba(0,0,0,0)),
     radial-gradient(1.5px 1.5px at 850px 340px, rgba(255,255,255,0.6), rgba(0,0,0,0));
   background-size: 450px 450px;
-  opacity: 0.6;
+  opacity: 0.65;
 }
 
 @keyframes cosmicPulse {
-  0% { opacity: 0.6; transform: scale(1); }
-  100% { opacity: 0.95; transform: scale(1.02); }
+  0% { opacity: 0.65; }
+  100% { opacity: 1; }
 }
 
-/* Họa tiết vũ trụ: Hành tinh có vành đai & sao 4 cánh */
 .cosmic-planet {
   position: absolute;
-  top: 40px;
-  right: 50px;
-  width: 58px;
-  height: 58px;
+  top: 36px;
+  right: 48px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
   background: linear-gradient(135deg, #EC4899, #8B5CF6 70%, #3D5AFE);
   box-shadow: 0 0 25px rgba(236, 72, 153, 0.5);
   pointer-events: none;
-  opacity: 0.75;
+  opacity: 0.8;
 }
 .cosmic-planet::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 96px;
-  height: 24px;
+  width: 90px;
+  height: 22px;
   border-radius: 50%;
-  border: 2px solid rgba(255, 255, 255, 0.45);
+  border: 2px solid rgba(255, 255, 255, 0.5);
   transform: translate(-50%, -50%) rotate(-25deg);
-  box-shadow: 0 0 12px rgba(127, 163, 255, 0.4);
+  box-shadow: 0 0 10px rgba(127, 163, 255, 0.4);
 }
 
 .sparkle-icon {
@@ -465,11 +461,11 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   animation: sparkleBlink 3s ease-in-out infinite alternate;
 }
 @keyframes sparkleBlink {
-  0% { opacity: 0.3; transform: scale(0.8) rotate(0deg); }
-  100% { opacity: 1; transform: scale(1.2) rotate(15deg); }
+  0% { opacity: 0.3; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1.2); }
 }
 
-/* Camera 3D */
+/* Không gian Camera 3D */
 .journey-camera {
   width: 100%;
   height: 100%;
@@ -478,89 +474,94 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Con đường ánh sáng vũ trụ (Kéo dài gấp đôi, sâu tới Z = -2200px) */
+/* Con đường 3D: Góc nghiêng 48deg giúp đường trải dài tự nhiên từ đáy lên chân trời */
 .galaxy-path-container {
   position: absolute;
-  top: 50%;
+  bottom: -40px;
   left: 50%;
-  width: 500px;
-  height: 2800px;
-  transform: translate(-50%, -50%) rotateX(82deg) translateZ(-650px);
+  width: 460px;
+  height: 1400px;
+  transform-origin: 50% 100%;
+  transform: translateX(-50%) rotateX(48deg);
   transform-style: preserve-3d;
   pointer-events: none;
+  z-index: 1;
 }
 
-/* Ngôi sao phát sáng dẫn lối ở tận cùng con đường */
+/* Ngôi sao dẫn lối (Guiding Pulsar) rực sáng ở đỉnh con đường */
 .beacon-star {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) translate3d(0px, -40px, -2050px);
+  transform: translate(-50%, -50%) translate3d(0px, -60px, -1820px);
   display: flex;
   flex-direction: column;
   align-items: center;
   pointer-events: none;
+  z-index: 2;
 }
 .beacon-core {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
   background: #FFFFFF;
-  box-shadow: 0 0 20px #7FA3FF, 0 0 50px #EC4899, 0 0 90px #3D5AFE;
+  box-shadow: 0 0 25px #FFFFFF, 0 0 50px #7FA3FF, 0 0 90px #EC4899;
   position: relative;
-  animation: beaconPulse 2.2s infinite ease-in-out;
+  animation: beaconPulse 2s infinite ease-in-out;
 }
 .beacon-core::before, .beacon-core::after {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-.beacon-core::before { width: 70px; height: 3px; }
-.beacon-core::after { width: 3px; height: 70px; }
+.beacon-core::before { width: 80px; height: 3px; }
+.beacon-core::after { width: 3px; height: 80px; }
+
 .beacon-label {
-  margin-top: 18px;
+  margin-top: 14px;
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.12em;
   color: #7FA3FF;
-  text-shadow: 0 0 10px rgba(127,163,255,0.7);
+  text-shadow: 0 0 10px rgba(127,163,255,0.8);
   white-space: nowrap;
 }
 
 @keyframes beaconPulse {
-  0% { transform: scale(0.9); box-shadow: 0 0 15px #7FA3FF, 0 0 40px #EC4899; }
-  50% { transform: scale(1.3); box-shadow: 0 0 35px #fff, 0 0 75px #EC4899, 0 0 120px #3D5AFE; }
-  100% { transform: scale(0.9); box-shadow: 0 0 15px #7FA3FF, 0 0 40px #EC4899; }
+  0% { transform: scale(0.95); box-shadow: 0 0 20px #FFFFFF, 0 0 45px #7FA3FF; }
+  50% { transform: scale(1.3); box-shadow: 0 0 35px #FFFFFF, 0 0 75px #EC4899, 0 0 120px #3D5AFE; }
+  100% { transform: scale(0.95); box-shadow: 0 0 20px #FFFFFF, 0 0 45px #7FA3FF; }
 }
 
-/* Thẻ milestone */
+/* Thẻ Milestone */
 .milestone-card {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 330px;
-  padding: 26px 24px;
-  background: rgba(18, 22, 54, 0.78);
+  width: 320px;
+  padding: 24px 22px;
+  background: rgba(18, 22, 54, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
   cursor: pointer;
   transition: opacity 0.5s ease, filter 0.5s ease, transform 0.5s ease, border-color 0.3s;
   box-sizing: border-box;
+  z-index: 5;
 }
 
 .milestone-card:hover { border-color: rgba(127, 163, 255, 0.8); }
 .milestone-card.active-focus {
   border: 1.5px solid #7FA3FF;
-  box-shadow: 0 0 32px rgba(61, 90, 254, 0.45), 0 20px 40px rgba(0, 0, 0, 0.5);
-  background: rgba(22, 28, 68, 0.92);
+  box-shadow: 0 0 32px rgba(61, 90, 254, 0.5), 0 20px 40px rgba(0, 0, 0, 0.5);
+  background: rgba(22, 28, 68, 0.94);
 }
 .milestone-card .badge {
   display: inline-block;
@@ -572,7 +573,7 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   margin-bottom: 8px;
 }
 .milestone-card h4 {
-  font-size: 20px;
+  font-size: 19px;
   color: #FFFFFF;
   margin-bottom: 6px;
   line-height: 1.25;
@@ -581,12 +582,12 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   font-size: 12px;
   font-weight: 600;
   color: #FF9CD1;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .milestone-card p {
-  font-size: 13.5px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.6;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.55;
   margin: 0;
 }
 
@@ -594,7 +595,7 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 26px;
+  margin-top: 24px;
   flex-wrap: wrap;
   gap: 16px;
 }
@@ -608,6 +609,39 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
   width: 28px; border-radius: 100px;
   background: #7FA3FF;
   box-shadow: 0 0 10px rgba(127, 163, 255, 0.6);
+}
+
+/* ==================== TỐI ƯU GIAO DIỆN DI ĐỘNG ==================== */
+@media (max-width: 768px) {
+  .journey-viewport {
+    height: 480px;
+    perspective: 800px;
+  }
+  .milestone-card {
+    width: 275px;
+    padding: 20px 18px;
+  }
+  .milestone-card h4 { font-size: 17px; }
+  .milestone-card p { font-size: 12.5px; }
+  .cosmic-planet {
+    width: 42px;
+    height: 42px;
+    top: 20px;
+    right: 20px;
+  }
+  .cosmic-planet::after {
+    width: 68px;
+    height: 18px;
+  }
+  .galaxy-path-container {
+    width: 320px;
+  }
+  .camera-controls {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+  }
 }
 </style>
 </head>
@@ -1044,13 +1078,12 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 <section class="journey-dark-section" id="journey" data-theme="dark">
   <div class="wrap">
     
-    <!-- Tiêu đề tiếng Anh chuẩn phong cách trang chủ -->
     <div class="sec-head" style="margin-bottom: 10px;">
       <div>
-        <span class="kicker" style="color: #7FA3FF;">My Journey</span>
+        <span class="kicker" style="color: #7FA3FF;">Time Travel &amp; Milestones</span>
         <h2 style="color: #FFFFFF;">Still early, still building</h2>
       </div>
-      <p style="color: rgba(255,255,255,0.65);">Click on any milestone card or navigate to travel back along my growth trajectory</p>
+      <p style="color: rgba(255,255,255,0.65);">Click on any milestone card or navigate to travel back along my growth trajectory.</p>
     </div>
 
     <!-- Khung vũ trụ 3D Viewport -->
@@ -1062,24 +1095,24 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
 
       <!-- Hành tinh & các chùm sao trang trí phát sáng -->
       <div class="cosmic-planet"></div>
-      <span class="sparkle-icon" style="top: 28%; left: 14%;">✦</span>
-      <span class="sparkle-icon" style="top: 70%; left: 88%; animation-delay: 1.5s;">✦</span>
-      <span class="sparkle-icon" style="top: 15%; left: 62%; font-size: 22px; color: #EC4899; animation-delay: 0.8s;">✦</span>
+      <span class="sparkle-icon" style="top: 24%; left: 12%;">✦</span>
+      <span class="sparkle-icon" style="top: 68%; left: 88%; animation-delay: 1.5s;">✦</span>
+      <span class="sparkle-icon" style="top: 18%; left: 60%; font-size: 20px; color: #EC4899; animation-delay: 0.8s;">✦</span>
       
       <div class="journey-camera" id="journeyCamera">
         
-        <!-- Con đường ánh sáng vũ trụ: Kéo dài xuyên suốt cả 5 trạm -->
+        <!-- Con đường ánh sáng vũ trụ chạy xuyên suốt các mốc -->
         <div class="galaxy-path-container">
-          <svg width="100%" height="100%" viewBox="0 0 100 1200" preserveAspectRatio="none">
+          <svg width="100%" height="100%" viewBox="0 0 100 1000" preserveAspectRatio="none">
             <defs>
-              <linearGradient id="cosmicStream" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
-                <stop offset="25%" stop-color="#7FA3FF" stop-opacity="0.85"/>
-                <stop offset="60%" stop-color="#8B5CF6" stop-opacity="0.75"/>
-                <stop offset="100%" stop-color="#EC4899" stop-opacity="0.8"/>
+              <linearGradient id="cosmicStream" x1="0%" y1="100%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#3D5AFE" stop-opacity="0.95"/>
+                <stop offset="35%" stop-color="#8B5CF6" stop-opacity="0.85"/>
+                <stop offset="70%" stop-color="#EC4899" stop-opacity="0.85"/>
+                <stop offset="100%" stop-color="#FFFFFF" stop-opacity="1"/>
               </linearGradient>
             </defs>
-            <path d="M 50,0 Q 25,250 75,550 T 35,900 T 50,1200" fill="none" stroke="url(#cosmicStream)" stroke-width="4.5" stroke-dasharray="12 8"/>
+            <path d="M 50,1000 Q 25,750 65,500 T 40,200 L 50,0" fill="none" stroke="url(#cosmicStream)" stroke-width="5" stroke-dasharray="14 10"/>
           </svg>
         </div>
 
@@ -1090,31 +1123,31 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
         </div>
 
         <!-- Milestone 01: Present & Ahead (Z = 0) -->
-        <div class="milestone-card active-focus" data-index="0" style="transform: translate(-30%, -50%) translate3d(160px, 0px, 0px);">
+        <div class="milestone-card active-focus" data-index="0">
           <span class="badge">Milestone 05 · The unfolding</span>
           <h4>Toward Brand Marketing</h4>
           <div class="time">What's Next · 2026+</div>
           <p>Building toward a Brand Marketing role at a company I genuinely admire - Adidas is one milestone I'm working toward, alongside global FMCG and tech names</p>
         </div>
 
-        <!-- Milestone 02: Early 2026 (Z = -450px) -->
-        <div class="milestone-card" data-index="1" style="transform: translate(-70%, -50%) translate3d(-180px, -20px, -450px);">
+        <!-- Milestone 02: 2025 - Present (Z = -450px) -->
+        <div class="milestone-card" data-index="1">
           <span class="badge">Milestone 04</span>
           <h4>Startup &amp; Competitions</h4>
           <div class="time">2025-Present</div>
           <p>1st Runner Up at UEH Startup Zone 2025 (Mycelium material startup); Oreo, Friso, Cake by VPBank, ELLAC with different briefs, same habit of turning an insight into an idea I can actually pitch</p>
         </div>
 
-        <!-- Milestone 03: 2025 - 2026 (Z = -900px) -->
-        <div class="milestone-card" data-index="2" style="transform: translate(-30%, -50%) translate3d(180px, 10px, -900px);">
+        <!-- Milestone 03: 2024 - 2026 (Z = -900px) -->
+        <div class="milestone-card" data-index="2">
           <span class="badge">Milestone 03</span>
           <h4>International Experiences</h4>
           <div class="time">2024-2026</div>
           <p>Exchange semester at RUAS (Netherlands) + several international study tours - a good reminder that marketing looks different everywhere</p>
         </div>
 
-        <!-- Milestone 04: 2024 - 2025 (Z = -1350px) -->
-        <div class="milestone-card" data-index="3" style="transform: translate(-70%, -50%) translate3d(-180px, -15px, -1350px);">
+        <!-- Milestone 04: 2024 - Present (Z = -1350px) -->
+        <div class="milestone-card" data-index="3">
           <span class="badge">Milestone 02</span>
           <h4>Content Creator</h4>
           <div class="time">2024-Present</div>
@@ -1122,7 +1155,7 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
         </div>
 
         <!-- Milestone 05: 2024 (Z = -1800px) -->
-        <div class="milestone-card" data-index="4" style="transform: translate(-50%, -50%) translate3d(0px, 0px, -1800px);">
+        <div class="milestone-card" data-index="4">
           <span class="badge">Milestone 01 · Where it all began</span>
           <h4>Marketing Student</h4>
           <div class="time">2024 · UEH.ISB Honours College</div>
@@ -1132,10 +1165,10 @@ footer{padding:34px 0; text-align:center; font-size:12.5px; color:rgba(255,255,2
       </div>
     </div>
 
-    <!-- Điều khiển Camera -->
+    <!-- Thanh điều hướng và nút bấm Camera -->
     <div class="camera-controls">
       <div style="font-size: 13.5px; color: rgba(255,255,255,0.7); font-weight: 500;">
-        Trajectory: <span id="currentPhaseText" style="color: #7FA3FF; font-weight: 700;">Toward Brand Marketing (Present)</span>
+        Trajectory: <span id="currentPhaseText" style="color: #7FA3FF; font-weight: 700;">Toward Brand Marketing (What's Next · 2026+)</span>
       </div>
 
       <div style="display: flex; align-items: center; gap: 14px;">
@@ -1218,79 +1251,94 @@ const io = new IntersectionObserver((entries)=>{
 
 allSections.forEach(s=>io.observe(s));
 
-// ==================== 3D GALAXY CAMERA CONTROLLER ====================
+// ==================== 3D GALAXY CAMERA CONTROLLER (RESPONSIVE) ====================
 const camera = document.getElementById('journeyCamera');
 const cards = document.querySelectorAll('.milestone-card');
 const dots = document.querySelectorAll('.step-dot');
 const phaseText = document.getElementById('currentPhaseText');
 
-const milestonePositions = [
-  { z: 0, x: -160, title: 'Toward Brand Marketing (Present)' },
-  { z: 450, x: 180, title: 'International Experiences (2024 - 2026)' },
-  { z: 900, x: -180, title: 'Content Creator (2024 - Present - @Duckando)' },
-  { z: 1350, x: 180, title: 'Startup & Competitions (2025 - 2026)' },
-  { z: 1800, x: 0, title: 'Marketing Student (2024 - Origin at UEH.ISB)' }
+const isMobile = window.innerWidth <= 768;
+
+// Cấu hình vị trí: Trên điện thoại triệt tiêu độ lệch X (x=0) để thẻ luôn nằm trọn giữa màn hình
+const milestones = [
+  { z: 0, x: isMobile ? 0 : 150, title: "Toward Brand Marketing (What's Next · 2026+)" },
+  { z: -450, x: isMobile ? 0 : -160, title: "Startup & Competitions (2025-Present)" },
+  { z: -900, x: isMobile ? 0 : 160, title: "International Experiences (2024-2026)" },
+  { z: -1350, x: isMobile ? 0 : -160, title: "Content Creator (2024-Present)" },
+  { z: -1800, x: 0, title: "Marketing Student (2024 · Where it all began)" }
 ];
+
+// Khởi tạo vị trí 3D ban đầu cho từng thẻ
+cards.forEach((card, i) => {
+  const m = milestones[i];
+  card.style.transform = `translate(-50%, -50%) translate3d(${m.x}px, 0px, ${m.z}px)`;
+});
 
 let currentIndex = 0;
 
 function updateCamera(index) {
-  currentIndex = Math.max(0, Math.min(index, milestonePositions.length - 1));
-  const target = milestonePositions[currentIndex];
+  currentIndex = Math.max(0, Math.min(index, milestones.length - 1));
+  const target = milestones[currentIndex];
 
-  // Camera lướt theo trục Z và lia ngang trục X
-  camera.style.transform = `translate3d(${target.x}px, 0px, ${target.z}px)`;
+  // Camera tiến vào theo trục Z và xoay chuyển theo trục X
+  const camX = -target.x;
+  const camZ = -target.z;
+  camera.style.transform = `translate3d(${camX}px, 0px, ${camZ}px)`;
 
   cards.forEach((card, i) => {
     if (i < currentIndex) {
-      // CÁC Ô ĐÃ VƯỢT QUA Ở PHÍA TRƯỚC: Ẩn hoàn toàn để không che tầm nhìn
+      // Ẩn hoàn toàn các thẻ đã vượt qua phía trước để không chắn chữ
       card.classList.remove('active-focus');
       card.style.opacity = '0';
       card.style.pointerEvents = 'none';
       card.style.filter = 'blur(10px)';
     } else if (i === currentIndex) {
-      // Ô ĐANG XEM: Sắc nét 100%, nổi bật rực rỡ
+      // Thẻ đang chọn sắc nét 100%
       card.classList.add('active-focus');
       card.style.opacity = '1';
       card.style.pointerEvents = 'auto';
       card.style.filter = 'blur(0px)';
     } else {
-      // CÁC Ô QUÁ KHỨ Ở PHÍA SAU: Hiện mờ ảo theo độ sâu không gian
+      // Các thẻ mốc ở quá khứ mờ ảo theo độ sâu
       const depth = i - currentIndex;
       card.classList.remove('active-focus');
       card.style.pointerEvents = 'auto';
       if (depth === 1) {
-        card.style.opacity = '0.55';
+        card.style.opacity = '0.5';
         card.style.filter = 'blur(2px)';
       } else {
-        card.style.opacity = '0.2';
+        card.style.opacity = '0.18';
         card.style.filter = 'blur(5px)';
       }
     }
   });
 
-  // Đồng bộ chấm navigation và text trạng thái
   dots.forEach((dot, i) => dot.classList.toggle('active', i === currentIndex));
   if (phaseText) phaseText.innerText = target.title;
 }
 
-function nextMilestone() {
-  updateCamera(currentIndex + 1);
-}
-
-function prevMilestone() {
-  updateCamera(currentIndex - 1);
-}
-
-function goToMilestone(index) {
-  updateCamera(index);
-}
+function nextMilestone() { updateCamera(currentIndex + 1); }
+function prevMilestone() { updateCamera(currentIndex - 1); }
+function goToMilestone(index) { updateCamera(index); }
 
 cards.forEach((card, idx) => {
-  card.addEventListener('click', () => {
-    updateCamera(idx);
-  });
+  card.addEventListener('click', () => updateCamera(idx));
 });
+
+// Lắng nghe thay đổi kích thước màn hình
+window.addEventListener('resize', () => {
+  const mobileNow = window.innerWidth <= 768;
+  milestones.forEach((m, i) => {
+    if (i === 4) m.x = 0;
+    else if (i % 2 === 0) m.x = mobileNow ? 0 : 150;
+    else m.x = mobileNow ? 0 : -160;
+    cards[i].style.transform = `translate(-50%, -50%) translate3d(${m.x}px, 0px, ${m.z}px)`;
+  });
+  updateCamera(currentIndex);
+});
+
+// Chạy khởi tạo ngay khi tải trang
+updateCamera(0);
 </script>
 
 </body>
